@@ -36,6 +36,18 @@ git checkout main             # Ir a la rama principal
 git merge nombre-rama         # Traer cambios de otra rama
 ```
 
+### Eliminar ramas
+```bash
+# Eliminar una rama local
+git branch -d nombre-rama
+
+# Forzar la eliminación de una rama local (si tiene cambios no fusionados)
+git branch -D nombre-rama
+
+# Eliminar una rama remota
+git push origin --delete nombre-rama
+```
+
 ## Buenas prácticas
 1. Usar nombres descriptivos para las ramas
 2. Mantener las ramas actualizadas con main
@@ -83,16 +95,13 @@ git merge feature/dashboard
 git push origin main
 ```
 
-### 4. Revertir cambios en main
+### 4. Eliminar la rama
 ```bash
-# Ver historial de commits
-git log --oneline
+# Eliminar la rama local
+git branch -d feature/dashboard
 
-# Revertir a un commit específico
-git reset --hard <commit-id>
-
-# Forzar actualización en GitHub
-git push -f origin main
+# Eliminar la rama remota
+git push origin --delete feature/dashboard
 ```
 
 ### 5. Verificar estado
