@@ -1,46 +1,55 @@
-# Mi Chatbot Streamlit
+# Mi Chatbot con OpenAI
 
-Este es un chatbot interactivo construido con Streamlit y modelos de Hugging Face.
+Este es un chatbot interactivo construido con Streamlit y OpenAI GPT-3.5.
 
-## Requisitos
+## Características
 
-- Python 3.8+
-- pip
+- Interfaz de chat intuitiva
+- Respuestas coherentes y contextuales
+- Historial de conversación
+- Diseño responsive
 
-## Instalación
+## Configuración en Hugging Face Spaces
 
-1. Clonar el repositorio:
-```bash
-git clone https://github.com/tu-usuario/mi-chatbot-streamlit.git
-cd mi-chatbot-streamlit
+1. Crea un nuevo Space en Hugging Face
+2. Selecciona "Streamlit" como SDK
+3. Conecta tu repositorio
+4. Agrega las siguientes variables de entorno en la configuración del Space:
+   - `OPENAI_API_KEY`: Tu API key de OpenAI
+
+## Estructura del Proyecto
+
+```
+.
+├── app.py              # Aplicación principal
+├── requirements.txt    # Dependencias
+├── key.env            # Variables de entorno (local)
+└── src/
+    └── chatbot/       # Módulo del chatbot
 ```
 
-2. Crear y activar el entorno virtual:
-```bash
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
+## Desarrollo Local
 
-3. Instalar dependencias:
-```bash
-pip install -r requirements.txt
-```
+1. Clona el repositorio
+2. Crea un entorno virtual:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   .\venv\Scripts\activate   # Windows
+   ```
+3. Instala las dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Crea un archivo `key.env` con tu API key:
+   ```
+   OPENAI_API_KEY=tu_api_key_aqui
+   ```
+5. Ejecuta la aplicación:
+   ```bash
+   streamlit run app.py
+   ```
 
-## Configuración
+## Licencia
 
-1. Crear un archivo `.env` en la raíz del proyecto
-2. Agregar tus credenciales de Hugging Face:
-```
-HUGGINGFACE_API_KEY=tu_api_key_aquí
-```
-
-## Ejecución
-
-Para ejecutar la aplicación:
-```bash
-streamlit run app.py
-```
-
-## Despliegue
-
-Esta aplicación está desplegada en Hugging Face Spaces y GitHub. 
+MIT 
