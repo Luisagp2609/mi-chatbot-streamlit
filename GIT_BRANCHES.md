@@ -47,4 +47,65 @@ git merge nombre-rama         # Traer cambios de otra rama
 2. Desarrollar y probar en la rama
 3. Hacer commits regularmente
 4. Fusionar con main cuando esté lista
-5. Eliminar la rama después de fusionar 
+5. Eliminar la rama después de fusionar
+
+## Ejemplo Práctico: Creación y Manejo de Ramas
+
+### 1. Crear una nueva rama
+```bash
+git checkout -b feature/dashboard    # Crear y cambiar a nueva rama
+```
+
+### 2. Trabajar en la rama
+```bash
+# Crear un nuevo archivo
+touch GIT_BRANCHES.md
+
+# Agregar cambios
+git add GIT_BRANCHES.md
+
+# Guardar cambios
+git commit -m "Agregar guía de uso de ramas en Git"
+
+# Subir cambios a GitHub
+git push origin feature/dashboard
+```
+
+### 3. Fusionar con main
+```bash
+# Cambiar a main
+git checkout main
+
+# Fusionar cambios
+git merge feature/dashboard
+
+# Subir cambios fusionados
+git push origin main
+```
+
+### 4. Revertir cambios en main
+```bash
+# Ver historial de commits
+git log --oneline
+
+# Revertir a un commit específico
+git reset --hard <commit-id>
+
+# Forzar actualización en GitHub
+git push -f origin main
+```
+
+### 5. Verificar estado
+```bash
+# Ver en qué rama estamos
+git branch
+
+# Ver estado actual
+git status
+```
+
+## Notas importantes
+- Usar `git reset --hard` elimina cambios permanentemente
+- Usar `git push -f` reescribe la historia en GitHub
+- Siempre verificar en qué rama estamos antes de hacer cambios
+- Mantener un registro de los commits importantes 
