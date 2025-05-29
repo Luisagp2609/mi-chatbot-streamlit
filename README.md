@@ -21,7 +21,7 @@ Este es un chatbot interactivo construido con Streamlit y OpenAI GPT-3.5.
 
 ```
 .
-├── app.py              # Aplicación principal
+├── App.py              # Aplicación principal
 ├── requirements.txt    # Dependencias
 ├── key.env            # Variables de entorno (local)
 └── src/
@@ -47,7 +47,7 @@ Este es un chatbot interactivo construido con Streamlit y OpenAI GPT-3.5.
    ```
 5. Ejecuta la aplicación:
    ```bash
-   streamlit run app.py
+   streamlit run App.py
    ```
 
 ## Licencia
