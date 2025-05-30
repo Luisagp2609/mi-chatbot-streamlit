@@ -1,20 +1,40 @@
-# Python
+# Archivos de entorno
+.env
+key.env
+*.env
+
+# Archivos de Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-venv/
-ENV/
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Environment variables
-.env
-*.env
+# Archivos de Streamlit
+.streamlit/
 
-# IDE
-.vscode/
+# Archivos de IDE
 .idea/
+.vscode/
+*.swp
+*.swo
 
-# OS
+# Archivos del sistema
 .DS_Store
 Thumbs.db 
